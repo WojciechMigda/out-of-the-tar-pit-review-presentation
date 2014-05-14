@@ -45,7 +45,7 @@
 
 <section data-background="#0a3c59">
   <h1>"Out of the Tar Pit"</h1>
-  <h3>review</h3>
+  <h3>review (chapters 1-7)</h3>
   <p>
   <small>Created by Wojciech Migda</small>
   </p>
@@ -60,6 +60,17 @@
   <p>Peter Marks <a href="mailto:public@indigomail.net">public@indigomail.net</a>
 
   <p><small>February 6, 2006</small></p>
+</section>
+
+<section data-background="#0a3c59">
+
+
+  <p>Discussed during</p>
+  <h3>Software Craftmanship Kraków meetup #35</h3>
+
+  <p><a href="http://www.meetup.com/sc-krk/events/97670432/">January 16, 2013</a></p>
+
+
 </section>
 
 <section data-background="#0a3c59">
@@ -511,6 +522,82 @@ to be had from avoiding hidden, implicit, mutable state.
   <li>if it cannot be avoided - separate it,
 </li>
   </ul>
+
+</section>
+
+<section data-background="#0a3c59">
+
+  <h2>Recommendations</h2>
+
+  <p>
+  <i>Accidental state</i> should be completely separated and its maintenance delegated to a dedicated infrastructure/component.
+  </p>
+
+</section>
+
+<section data-background="#0a3c59">
+
+  <h2>Recommendations</h2>
+
+  <p>
+  When <i>accidental state</i>, for whatever valid reason, must be maintained directly within the system then the only natural
+  way out is to pretend that this is an <i>essential state</i> and create an illusion that this is an external input from the user.
+  </p>
+
+</section>
+
+<section data-background="#0a3c59">
+
+  <h2>Recommendations</h2>
+
+  <p>
+<img src="img/pic1.png" style="border:0px;margin:20px;width:50%" alt="architecture"/>
+  </p>
+  <p>
+<i>Essential state</i> is self contained. It does not refer anything else.
+  </p>
+
+</section>
+
+<section data-background="#0a3c59">
+
+  <h2>Recommendations</h2>
+
+  <p>
+<img src="img/pic1.png" style="border:0px;margin:20px;width:50%" alt="architecture"/>
+  </p>
+  <p>
+<i>Essential logic</i> is the heart of the system, corresponds to the business logic.<br/> It specifies invariants about the state — what must be true.
+  </p>
+
+</section>
+
+<section data-background="#0a3c59">
+
+  <h2>Recommendations</h2>
+
+  <p>
+<img src="img/pic1.png" style="border:0px;margin:20px;width:50%" alt="architecture"/>
+  </p>
+  <p>
+<i>Accidental state and control</i> — changes to it will never require changes to the essential state/logic.
+  </p>
+
+</section>
+
+<section data-background="#0a3c59">
+
+  <h2>Risks of “designing for performance”</h2>
+
+  <p>
+  “<i>
+  The dangers of “premature optimisation” are as real as ever — there can
+be no comparison between the difficulty of improving the performance of a
+slow system designed for simplicity and that of removing complexity from a
+complex system which was designed to be fast (and quite possibly isn’t even
+that because of myriad inefficiencies hiding within its complexity).</i>
+  ”
+  </p>
 
 </section>
 
